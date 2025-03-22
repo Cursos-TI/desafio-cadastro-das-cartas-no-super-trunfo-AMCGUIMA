@@ -56,7 +56,7 @@ int main() {
 
     // Coleta de Dados da carta 2 via teclado e função scanf.
 
-    printf("\n     Preencha os dados da carta 2:\n");
+    printf("\n\n   Preencha os dados da carta 2:\n");
     printf("Digita uma letra de 'A' a 'H' (representando um dos oito estados). \nEstado: ");
     scanf(" %c", &estado2);
 
@@ -78,7 +78,8 @@ int main() {
     printf("\nInforme a quantidade de pontos turiscos na cidade. \nNumero de pontos turisticos: ");
     scanf(" %d", &pontosTuristicos2);
 
-
+    
+    printf("\n\n   Dados das Cartas 1 e 2.");
     // Impressao dos dados da carta 1
     printf("\n\nCarta 1:");
     printf("\nEstado: %c", estado1); 
