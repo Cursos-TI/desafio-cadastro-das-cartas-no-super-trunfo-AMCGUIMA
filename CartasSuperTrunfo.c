@@ -30,7 +30,7 @@ int main() {
 
     // Coleta de Dados da carta 1 via teclado e função scanf.
 
-    printf("     Preencha os dados da Carta 1:\n"); 
+    printf("     Preencha os dados da Carta 1:\n\n"); 
 
     printf("Digita uma letra de 'A' a 'H' (representando um dos oito estados). \nEstado: ");
     scanf(" %c", &estado1);
@@ -56,7 +56,8 @@ int main() {
 
     // Coleta de Dados da carta 2 via teclado e função scanf.
 
-    printf("\n\n   Preencha os dados da carta 2:\n");
+    printf("\n\n   Preencha os dados da carta 2:\n\n");
+
     printf("Digita uma letra de 'A' a 'H' (representando um dos oito estados). \nEstado: ");
     scanf(" %c", &estado2);
 
@@ -99,6 +100,8 @@ int main() {
     printf("\nArea: %.2f km2", area2); 
     printf("\nPIB: %.2f bilhoes de reais", pib2);
     printf("\nNumero de Pontos Turisticos: %d", pontosTuristicos2);
+
+    printf("\n\n\n"); //Para pular algumas linhas e ficar mais visivel o resulta na ultima linha
 
 
     return 0;
