@@ -19,7 +19,7 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
 
-    // Variaveis das Cartas 1 e 2 criado para armazenar os dados inputado pelo teclado:
+    // Variaveis das Cartas 1 e 2 criado para armazenar os dados inputados pelo teclado:
     char estado1, estado2;   
     char codigo1[4], codigo2[4]; 
     char nomeCidade1[20], nomeCidade2[20];
