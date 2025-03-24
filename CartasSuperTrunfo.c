@@ -52,7 +52,7 @@ int main() {
     scanf(" %19s", nomeCidade1);
 
     printf("\nInforme o numero de habitantes da cidade. \nPopulacao: ");
-    scanf(" %d", &populacao1);
+    scanf(" %ld", &populacao1);
 
     printf("\nInforme a area da cidade em quilometros quadrados: ");
     scanf(" %f", &area1);
@@ -78,7 +78,7 @@ int main() {
     scanf(" %19s", nomeCidade2);
 
     printf("\nInforme o numero de habitantes da cidade. \nPopulacao: ");
-    scanf(" %d", &populacao2);
+    scanf(" %ld", &populacao2);
 
     printf("\nInforme a area da cidade em quilometros quadrados: ");
     scanf(" %f", &area2);
@@ -96,7 +96,7 @@ int main() {
     printf("\nEstado: %c", estado1); 
     printf("\nCodigo: %s", codigo1); 
     printf("\nNome da Cidade: %s", nomeCidade1);
-    printf("\nPopulacao: %d", populacao1);
+    printf("\nPopulacao: %ld", populacao1);
     printf("\nArea: %.2f km2", area1);
     printf("\nPIB: %.2f bilhoes de reais", pib1);
     printf("\nNumero de Pontos Turisticos: %d", pontosTuristicos1);
@@ -121,7 +121,7 @@ int main() {
     printf("\nEstado: %c", estado2);
     printf("\nCodigo: %s", codigo2);
     printf("\nNome da Cidade: %s", nomeCidade2);
-    printf("\nPopulacao: %d", populacao2);
+    printf("\nPopulacao: %ld", populacao2);
     printf("\nArea: %.2f km2", area2); 
     printf("\nPIB: %.2f bilhoes de reais", pib2);
     printf("\nNumero de Pontos Turisticos: %d", pontosTuristicos2);
