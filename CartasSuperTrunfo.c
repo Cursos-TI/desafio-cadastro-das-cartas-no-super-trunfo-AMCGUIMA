@@ -22,7 +22,7 @@ int main() {
     char estado1, estado2;   
     char codigo1[4], codigo2[4]; 
     char nomeCidade1[20], nomeCidade2[20];
-    int populacao1, populacao2;
+    unsigned long int populacao1, populacao2; //Alterado para unsigned long int para desensover o nivel Mestre
     float area1, area2;
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
@@ -30,6 +30,12 @@ int main() {
     // Variaveis para calculo do PIB per capita e desindade populacional (Nivel Aventureiro)
     float desidadePopulacional1, desidadePopulacional2;
     float pibPercapita1, pibPercapita2;
+
+    //Variavel Super Poder -- Nivel Mestre
+    float superPoder1, superPoder2;
+    char Cartas[] ={'2', '1'}; // Variavel auxilar para armazenar o numero das cartas para ser exibido no resutado da comparação
+    int comparaPopulacao,  comparaArea, comparaPIB, comparaDensidadePopulacional; //Variaveis para armazenar o resultado das comparações
+    int comparaPontosTuristicos, comparaPibpercapita, comparaSuperpoder;  //Variaveis para armazenar o resultado das comparações
 
 
     // Coleta de Dados da carta 1 via teclado e função scanf.
@@ -103,6 +109,13 @@ int main() {
 
     printf("\nPIB per Capita: %.2f reais", pibPercapita1);
 
+    //Calculando Super Poder da Carta 1
+
+    superPoder1 = ((float)populacao1 + area1 + pib1 + (float)pontosTuristicos1 + pibPercapita1);
+    superPoder1 += (1/desidadePopulacional1);
+
+    printf("\nSuper Poder: %.2f ", superPoder1);
+
     // Impressao dos dados da carta 2
     printf("\n\nCarta 2:");
     printf("\nEstado: %c", estado2);
@@ -121,8 +134,39 @@ int main() {
 
     printf("\nPIB per Capita: %.2f reais", pibPercapita2);
 
+        //Calculando Super Poder da Carta 2
 
-    
+    superPoder2 = ((float)populacao2 + area2 + pib2 + (float)pontosTuristicos2 + pibPercapita2);
+    superPoder2 += (1/desidadePopulacional2);
+
+    printf("\nSuper Poder: %.2f ", superPoder2);
+
+
+
+    //Inicio da Comparação dos Atributos.
+    printf("\n\n   Comparacao de Cartas:");
+
+    //Criado cada variavel para armazenar as comparaçoes feitas com cada atributo.
+    comparaPopulacao = populacao1 > populacao2;
+    comparaArea = area1 > area2;
+    comparaPIB = pib1 > pib2;
+    comparaPontosTuristicos = pontosTuristicos1 > pontosTuristicos2;
+    comparaDensidadePopulacional = desidadePopulacional1 < desidadePopulacional2 ;
+    comparaPibpercapita = pibPercapita1 > pibPercapita2 ;
+    comparaSuperpoder = superPoder1 > superPoder2;
+
+
+    // Exibindo o resultado das comparações e o vencedor usando varivel char criada para armazenar o numero da carta:
+
+    printf("\nPopulacao: Carta %c venceu (%d)", Cartas[comparaPopulacao], comparaPopulacao);
+    printf("\nArea: Carta %c venceu (%d)", Cartas[comparaArea], comparaArea);
+    printf("\nPIB: Carta %c venceu (%d)", Cartas[comparaPIB], comparaPIB);
+    printf("\nPontos Turisticos: Carta %c venceu (%d)", Cartas[comparaPontosTuristicos], comparaPontosTuristicos);
+    printf("\nDensidade Populacional: Carta %c venceu (%d)", Cartas[comparaDensidadePopulacional], comparaDensidadePopulacional);
+    printf("\nPIB per Capita: Carta %c venceu (%d)", Cartas[comparaPibpercapita], comparaPibpercapita);
+    printf("\nSuper Poder: Carta %c venceu (%d)", Cartas[comparaSuperpoder], comparaSuperpoder);
+
+
     printf("\n\n\n"); //Para pular algumas linhas e ficar mais visivel o resulta na ultima linha
 
 
