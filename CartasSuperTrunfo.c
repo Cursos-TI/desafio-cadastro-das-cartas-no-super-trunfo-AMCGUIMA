@@ -27,6 +27,11 @@ int main() {
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
 
+    // Variaveis para calculo do PIB per capita e desindade populacional (Nivel Aventureiro)
+    float desidadePopulacional1, desidadePopulacional2;
+    float pibPercapita1, pibPercapita2;
+
+
     // Coleta de Dados da carta 1 via teclado e função scanf.
 
     printf("     Preencha os dados da Carta 1:\n\n"); 
@@ -90,6 +95,14 @@ int main() {
     printf("\nPIB: %.2f bilhoes de reais", pib1);
     printf("\nNumero de Pontos Turisticos: %d", pontosTuristicos1);
 
+    desidadePopulacional1 = (float)populacao1 / area1;  //Caculo da densidade populacioal da Carta 1
+
+    printf("\nDensidade Populacional: %.2f hab/km2", desidadePopulacional1); 
+
+    pibPercapita1 = pib1 / (float)populacao1; //Calculo do PIB per Capita da Carta 1
+
+    printf("\nPIB per Capita: %.2f reais", pibPercapita1);
+
     // Impressao dos dados da carta 2
     printf("\n\nCarta 2:");
     printf("\nEstado: %c", estado2);
@@ -100,6 +113,16 @@ int main() {
     printf("\nPIB: %.2f bilhoes de reais", pib2);
     printf("\nNumero de Pontos Turisticos: %d", pontosTuristicos2);
 
+    desidadePopulacional2 = (float)populacao2 / area2;  //Caculo da densidade populacioal da Carta 2
+
+    printf("\nDensidade Populacional: %.2f hab/km2", desidadePopulacional2); 
+
+    pibPercapita2 = pib2 / (float)populacao2; //Calculo do PIB per Capita da Carta 2
+
+    printf("\nPIB per Capita: %.2f reais", pibPercapita2);
+
+
+    
     printf("\n\n\n"); //Para pular algumas linhas e ficar mais visivel o resulta na ultima linha
 
 
